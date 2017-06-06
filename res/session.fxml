@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Open Source Software published under the Apache Licence, Version 2.0.
+  -->
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SessionController">
+    <center>
+        <AnchorPane>
+            <children>
+                <TabPane tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+                    <Tab text="Original Puzzle" >
+                        <content>
+                            <SplitPane fx:id="splitWordList" dividerPositions="0.65">
+                                <items>
+                                    <AnchorPane>
+                                        <children>
+                                            <BorderPane fx:id="mainWordPane" styleClass="mainWordPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <center>
+
+                                                </center>
+                                                <bottom>
+                                                </bottom>
+                                                <top>
+                                                </top>
+                                            </BorderPane>
+                                        </children>
+                                    </AnchorPane>
+                                    <AnchorPane>
+                                        <children>
+                                            <VBox spacing="3">
+                                                <children>
+                                                    <GridPane fx:id="acrossGrid">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="NEVER" />
+                                                            <ColumnConstraints hgrow="ALWAYS"  />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                            <RowConstraints />
+                                                            <RowConstraints prefHeight="5"/>
+                                                        </rowConstraints>
+                                                        <children >
+                                                            <Label style="-fx-font-weight: bolder; -fx-text-fill: #a43030; -fx-padding: 0.5em 0 0 2em;" GridPane.rowIndex="0">ACROSS</Label>
+                                                        </children>
+                                                    </GridPane>
+                                                    <GridPane fx:id="downGrid">
+                                                        <columnConstraints>
+                                                            <ColumnConstraints hgrow="NEVER" />
+                                                            <ColumnConstraints hgrow="ALWAYS" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                            <RowConstraints />
+                                                            <RowConstraints />
+                                                        </rowConstraints>
+                                                        <children>
+                                                            <Label style="-fx-font-weight: bolder; -fx-text-fill: #a43030; -fx-padding: 0 0 0 2em;" GridPane.rowIndex="0">DOWN</Label>
+                                                        </children>
+                                                    </GridPane>
+                                                </children>
+                                            </VBox>
+                                        </children>
+                                    </AnchorPane>
+                                </items>
+                            </SplitPane>
+                        </content>
+                    </Tab>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
