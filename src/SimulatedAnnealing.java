@@ -13,7 +13,6 @@ public class SimulatedAnnealing {
             r = makeMove(r, costToBeat, temperature);
             costToBeat = SolverUtils.getHeuristicCost(r);
             temperature = Math.max(temperature * coolingFactor, 0.01);
-            System.out.println(x + " " + temperature);
         }
 
         return costToBeat == 0 ? r : null; // return solution if solved
